@@ -1,32 +1,29 @@
 <script>
-
 import LanguageSwitcher from "./public/components/language-switcher.component.vue";
 import FooterContent from "./public/components/footer-content.component.vue";
 
 export default {
   name: 'app',
   components: {FooterContent, LanguageSwitcher},
-  data(){
-    return{
+  data() {
+    return {
       drawer: false,
       items: [
-        { label: 'option.home', to: '/home'},
-        { label: 'option.about', to: '/about'},
+        { label: 'option.home', to: '/home' },
+        { label: 'option.about', to: '/about'}
       ]
     }
   },
-  methods:{
-    toggleDrawer(){
+  methods: {
+    toggleDrawer() {
       this.drawer = !this.drawer;
     }
   }
 }
 </script>
 
-
 <template>
-  <pv-toast>
-  </pv-toast>
+  <pv-toast/>
   <pv-confirm-dialog/>
   <header>
     <pv-toolbar class="bg-primary">
@@ -48,30 +45,27 @@ export default {
     <pv-drawer v-model:visible="drawer"/>
   </header>
   <main>
-    <router-view></router-view>
+    <router-view/>
   </main>
   <footer>
-    <footer-content></footer-content>
+    <footer-content/>
   </footer>
-
 </template>
 
 <style scoped>
+header {
+  flex: 0 0 auto;
+}
 
-  header{
-    flex: 0 0 auto;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  main{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
-
-  footer{
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
-  }
-
+footer {
+  position:  absolute;
+  bottom: 0;
+  padding: 10px;
+}
 </style>

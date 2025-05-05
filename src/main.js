@@ -10,10 +10,10 @@ import {
     Card,
     Checkbox,
     Column, ConfirmationService,
+    ConfirmDialog,
     DataTable,
     Dialog, DialogService, Drawer,
-    FileUpload,
-    FloatLabel, IconField, InputIcon, InputNumber, InputText, Menu, Rating, Row,
+    FileUpload, FloatLabel, IconField, InputIcon, InputNumber, InputText, Menu, Rating, Row,
     Select,
     SelectButton, Tag, Textarea, Toast, ToastService, Toolbar
 } from "primevue";
@@ -23,14 +23,15 @@ import router from "./router/index.js";
 createApp(App)
     .use(i18n)
     .use(router)
-    .use(PrimeVue, {theme: {preset: Material}, ripple: true})
+    .use(PrimeVue, { theme: { preset: Material}, ripple: true})
     .use(ConfirmationService)
     .use(DialogService)
     .use(ToastService)
     .component('pv-button', Button)
     .component('pv-card', Card)
     .component('pv-column', Column)
-    .component('pv-confirm-dialog', Checkbox)
+    .component('pv-confirm-dialog', ConfirmDialog)
+    .component('pv-checkbox', Checkbox)
     .component('pv-data-table', DataTable)
     .component('pv-dialog', Dialog)
     .component('pv-select', Select)

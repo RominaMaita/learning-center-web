@@ -22,6 +22,7 @@ router.beforeEach((to, from, next)=> {
     console.log(`Navigating from ${from.name} to ${to.name}`);
     let baseTitle = 'ACME Learning Center';
     document.title = `${baseTitle} | ${to.meta['title']}`;
+    next();
 })
 
 export default router;
