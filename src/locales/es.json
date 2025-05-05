@@ -1,0 +1,12 @@
+{
+  "option": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "categories": "Categorias"
+  },
+  "authoring-phrase": {
+    "intro": "Hecho con",
+    "use": "usando",
+    "author": "por el Equipo de Desarrollo de {brand}"
+  }
+}
