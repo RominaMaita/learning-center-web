@@ -18,10 +18,15 @@ import {
     SelectButton, Tag, Textarea, Toast, ToastService, Toolbar
 } from "primevue";
 import i18n from "./i18n.js";
+import router from "./router/index.js";
 
 createApp(App)
-    .use(PrimeVue, {theme: {preset: Material}, ripple: true})
     .use(i18n)
+    .use(router)
+    .use(PrimeVue, {theme: {preset: Material}, ripple: true})
+    .use(ConfirmationService)
+    .use(DialogService)
+    .use(ToastService)
     .component('pv-button', Button)
     .component('pv-card', Card)
     .component('pv-column', Column)
@@ -44,7 +49,4 @@ createApp(App)
     .component('pv-textarea', Textarea)
     .component('pv-toolbar', Toolbar)
     .component('pv-toast', Toast)
-    .use(ConfirmationService)
-    .use(DialogService)
-    .use(ToastService)
     .mount('#app')
